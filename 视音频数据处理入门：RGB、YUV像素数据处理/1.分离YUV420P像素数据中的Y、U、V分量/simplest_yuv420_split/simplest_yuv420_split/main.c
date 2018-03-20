@@ -26,8 +26,10 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, World!\n");
     
+    char *url = "/Users/angle/Desktop/FFmpeg/FFmpeg_Leixiaohua/视音频数据处理入门：RGB、YUV像素数据处理/resources/lena_256x256_yuv420p.yuv";
+    
     //Test
-    simplest_yuv420_split("lena_256x256_yuv420p.yuv",256,256,1);
+    simplest_yuv420_split(url,256,256,1);
     
     return 0;
 }
