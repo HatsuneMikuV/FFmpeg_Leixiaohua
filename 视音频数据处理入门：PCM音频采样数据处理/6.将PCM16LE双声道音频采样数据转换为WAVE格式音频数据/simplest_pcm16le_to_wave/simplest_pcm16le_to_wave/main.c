@@ -25,7 +25,7 @@ int main(int argc, const char * argv[]) {
     //资源文件路径，此地址要更换为自己的电脑路径
     char *inUrl = "/Users/angle/Desktop/FFmpeg/FFmpeg_Leixiaohua/视音频数据处理入门：PCM音频采样数据处理/resources/NocturneNo2inEflat_44.1k_s16le.pcm";
     //输出资源路径，此地址要更换为自己的电脑路径
-    char *outUrl = "/Users/angle/Desktop/FFmpeg/FFmpeg_Leixiaohua/视音频数据处理入门：PCM音频采样数据处理/1.分离PCM16LE双声道音频采样数据的左声道和右声道/results/output_nocturne.wav";
+    char *outUrl = "/Users/angle/Desktop/FFmpeg/FFmpeg_Leixiaohua/视音频数据处理入门：PCM音频采样数据处理/6.将PCM16LE双声道音频采样数据转换为WAVE格式音频数据/results/output_nocturne.wav";
     
     
     //Test
