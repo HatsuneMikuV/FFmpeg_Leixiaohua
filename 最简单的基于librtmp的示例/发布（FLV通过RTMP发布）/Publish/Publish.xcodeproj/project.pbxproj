@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7CD42FE32069ECA500197307 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 7CD42FE22069ECA500197307 /* main.c */; };
+		7CD430222069F19900197307 /* librtmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD430212069F19900197307 /* librtmp.a */; };
+		7CD430242069F20300197307 /* Publish.c in Sources */ = {isa = PBXBuildFile; fileRef = 7CD430232069F20300197307 /* Publish.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,12 @@
 /* Begin PBXFileReference section */
 		7CD42FDF2069ECA500197307 /* Publish */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Publish; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD42FE22069ECA500197307 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		7CD4301C2069F14700197307 /* http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = http.h; sourceTree = "<group>"; };
+		7CD4301D2069F14700197307 /* amf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amf.h; sourceTree = "<group>"; };
+		7CD4301E2069F14700197307 /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
+		7CD4301F2069F14700197307 /* rtmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rtmp.h; sourceTree = "<group>"; };
+		7CD430212069F19900197307 /* librtmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librtmp.a; path = "../../../../../../../../usr/local/Cellar/rtmpdump/2.4+20151223/lib/librtmp.a"; sourceTree = "<group>"; };
+		7CD430232069F20300197307 /* Publish.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Publish.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CD430222069F19900197307 /* librtmp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +50,10 @@
 		7CD42FD62069ECA500197307 = {
 			isa = PBXGroup;
 			children = (
+				7CD4301B2069F14700197307 /* librtmp */,
 				7CD42FE12069ECA500197307 /* Publish */,
 				7CD42FE02069ECA500197307 /* Products */,
+				7CD430202069F19900197307 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +69,29 @@
 			isa = PBXGroup;
 			children = (
 				7CD42FE22069ECA500197307 /* main.c */,
+				7CD430232069F20300197307 /* Publish.c */,
 			);
 			path = Publish;
+			sourceTree = "<group>";
+		};
+		7CD4301B2069F14700197307 /* librtmp */ = {
+			isa = PBXGroup;
+			children = (
+				7CD4301C2069F14700197307 /* http.h */,
+				7CD4301D2069F14700197307 /* amf.h */,
+				7CD4301E2069F14700197307 /* log.h */,
+				7CD4301F2069F14700197307 /* rtmp.h */,
+			);
+			name = librtmp;
+			path = ../../librtmp;
+			sourceTree = "<group>";
+		};
+		7CD430202069F19900197307 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CD430212069F19900197307 /* librtmp.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CD42FE32069ECA500197307 /* main.c in Sources */,
+				7CD430242069F20300197307 /* Publish.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +267,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QZ8MTS5GLY;
+				LIBRARY_SEARCH_PATHS = "/usr/local/Cellar/rtmpdump/2.4+20151223/lib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -243,6 +277,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QZ8MTS5GLY;
+				LIBRARY_SEARCH_PATHS = "/usr/local/Cellar/rtmpdump/2.4+20151223/lib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
