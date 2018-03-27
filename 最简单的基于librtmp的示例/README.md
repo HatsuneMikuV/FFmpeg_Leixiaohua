@@ -10,3 +10,11 @@
     * 接收RTMP流媒体并在本地保存成FLV格式的文件。
     * 将FLV格式的视音频文件使用RTMP推送至RTMP流媒体服务器。
     *  将内存中的H.264数据推送至RTMP流媒体服务器。
+
+
+##### librtmp如果未安装，请先安装
+
+* 安装方法
+    *  brew install rtmpdump
+    * ->Build Settings -> Library Search Paths  地址更换为自己电脑地址（报错的情况下）
+
