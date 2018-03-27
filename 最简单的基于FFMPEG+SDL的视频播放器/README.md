@@ -15,9 +15,9 @@
     *  brew install ffmpeg
     * ->Build Settings -> Library Search Paths  地址更换为自己电脑地址（报错的情况下）
     
-##### SDL  如果未安装，请先安装
+##### SDL2  如果未安装，请先安装
 
 * 安装方法
-    *  brew install SDL
+    *  brew install SDL2
     * ->Build Settings -> Library Search Paths  地址更换为自己电脑地址（报错的情况下）
 
