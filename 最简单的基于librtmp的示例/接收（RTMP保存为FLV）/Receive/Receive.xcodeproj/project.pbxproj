@@ -27,10 +27,10 @@
 		7CBECA1F20662A6A000843E8 /* Receive */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Receive; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CBECA2220662A6A000843E8 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		7CBECA2C20662BAF000843E8 /* librtmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librtmp.a; path = "../../../../../../../../usr/local/Cellar/rtmpdump/2.4+20151223/lib/librtmp.a"; sourceTree = "<group>"; };
-		7CBECA2F20662BCF000843E8 /* http.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = http.h; sourceTree = "<group>"; };
-		7CBECA3020662BCF000843E8 /* amf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = amf.h; sourceTree = "<group>"; };
-		7CBECA3120662BCF000843E8 /* log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
-		7CBECA3220662BCF000843E8 /* rtmp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rtmp.h; sourceTree = "<group>"; };
+		7CD430172069F11300197307 /* http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = http.h; sourceTree = "<group>"; };
+		7CD430182069F11300197307 /* amf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amf.h; sourceTree = "<group>"; };
+		7CD430192069F11300197307 /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
+		7CD4301A2069F11300197307 /* rtmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rtmp.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +48,7 @@
 		7CBECA1620662A6A000843E8 = {
 			isa = PBXGroup;
 			children = (
-				7CBECA2E20662BCF000843E8 /* librtmp */,
+				7CD430162069F11300197307 /* librtmp */,
 				7CBECA2120662A6A000843E8 /* Receive */,
 				7CBECA2020662A6A000843E8 /* Products */,
 				7CBECA2B20662BAF000843E8 /* Frameworks */,
@@ -79,15 +79,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7CBECA2E20662BCF000843E8 /* librtmp */ = {
+		7CD430162069F11300197307 /* librtmp */ = {
 			isa = PBXGroup;
 			children = (
-				7CBECA2F20662BCF000843E8 /* http.h */,
-				7CBECA3020662BCF000843E8 /* amf.h */,
-				7CBECA3120662BCF000843E8 /* log.h */,
-				7CBECA3220662BCF000843E8 /* rtmp.h */,
+				7CD430172069F11300197307 /* http.h */,
+				7CD430182069F11300197307 /* amf.h */,
+				7CD430192069F11300197307 /* log.h */,
+				7CD4301A2069F11300197307 /* rtmp.h */,
 			);
-			path = librtmp;
+			name = librtmp;
+			path = ../../librtmp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
