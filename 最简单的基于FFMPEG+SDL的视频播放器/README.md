@@ -9,9 +9,15 @@
 * 该程序可以打印出FFmpeg类库的基本信息，使用该程序通常可以验证FFmpeg是否正确的安装配置
 
 
-##### ffmpeg 如果未安装，请先安装
+##### ffmpeg  如果未安装，请先安装
 
 * 安装方法
     *  brew install ffmpeg
+    * ->Build Settings -> Library Search Paths  地址更换为自己电脑地址（报错的情况下）
+    
+##### SDL  如果未安装，请先安装
+
+* 安装方法
+    *  brew install SDL
     * ->Build Settings -> Library Search Paths  地址更换为自己电脑地址（报错的情况下）
 
