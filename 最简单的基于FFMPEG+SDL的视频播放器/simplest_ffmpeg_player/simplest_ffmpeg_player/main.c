@@ -82,6 +82,9 @@ int main(int argc, const char * argv[]) {
     SDL_Renderer* sdlRenderer;
     SDL_Texture* sdlTexture;
     SDL_Rect sdlRect;
+    SDL_Rect sdlRect1;
+    SDL_Rect sdlRect2;
+    SDL_Rect sdlRect3;
     SDL_Thread *video_tid;
     SDL_Event event;
     
@@ -146,7 +149,7 @@ int main(int argc, const char * argv[]) {
     screen_w = pCodecCtx->width;
     screen_h = pCodecCtx->height;
     screen = SDL_CreateWindow("Simplest ffmpeg player's Window", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
-                              screen_w, screen_h,SDL_WINDOW_OPENGL);
+                              screen_w * 2, screen_h * 2,SDL_WINDOW_OPENGL);
     
     if(!screen) {
         printf("SDL: could not create window - exiting:%s\n",SDL_GetError());
@@ -161,6 +164,21 @@ int main(int argc, const char * argv[]) {
     sdlRect.y=0;
     sdlRect.w=screen_w;
     sdlRect.h=screen_h;
+    
+    sdlRect1.x=screen_w;
+    sdlRect1.y=0;
+    sdlRect1.w=screen_w;
+    sdlRect1.h=screen_h;
+    
+    sdlRect2.x=0;
+    sdlRect2.y=screen_h;
+    sdlRect2.w=screen_w;
+    sdlRect2.h=screen_h;
+    
+    sdlRect3.x=screen_w;
+    sdlRect3.y=screen_h;
+    sdlRect3.w=screen_w;
+    sdlRect3.h=screen_h;
     
     packet=(AVPacket *)av_malloc(sizeof(AVPacket));
     
@@ -189,8 +207,10 @@ int main(int argc, const char * argv[]) {
                 //SDL---------------------------
                 SDL_UpdateTexture( sdlTexture, NULL, pFrameYUV->data[0], pFrameYUV->linesize[0] );
                 SDL_RenderClear( sdlRenderer );
-                //SDL_RenderCopy( sdlRenderer, sdlTexture, &sdlRect, &sdlRect );
-                SDL_RenderCopy( sdlRenderer, sdlTexture, NULL, NULL);
+                SDL_RenderCopy( sdlRenderer, sdlTexture, NULL, &sdlRect);
+                SDL_RenderCopy( sdlRenderer, sdlTexture, NULL, &sdlRect1);
+                SDL_RenderCopy( sdlRenderer, sdlTexture, NULL, &sdlRect2);
+                SDL_RenderCopy( sdlRenderer, sdlTexture, NULL, &sdlRect3);
                 SDL_RenderPresent( sdlRenderer );
                 //SDL End-----------------------
             }
