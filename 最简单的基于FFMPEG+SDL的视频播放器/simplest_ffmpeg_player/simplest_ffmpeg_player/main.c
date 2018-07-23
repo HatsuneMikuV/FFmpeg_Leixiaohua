@@ -129,16 +129,14 @@ int main(int argc, const char * argv[]) {
     pFrameYUV=av_frame_alloc();
     
     out_buffer=(unsigned char *)av_malloc(av_image_get_buffer_size(AV_PIX_FMT_YUV420P,  pCodecCtx->width, pCodecCtx->height,1));
-    av_image_fill_arrays(pFrameYUV->data, pFrameYUV->linesize,out_buffer,
-                         AV_PIX_FMT_YUV420P,pCodecCtx->width, pCodecCtx->height,1);
+    av_image_fill_arrays(pFrameYUV->data, pFrameYUV->linesize,out_buffer, AV_PIX_FMT_YUV420P,pCodecCtx->width, pCodecCtx->height,1);
     
     //Output Info-----------------------------
     printf("---------------- File Information ---------------\n");
     av_dump_format(pFormatCtx,0,filepath,0);
     printf("-------------------------------------------------\n");
     
-    img_convert_ctx = sws_getContext(pCodecCtx->width, pCodecCtx->height, pCodecCtx->pix_fmt,
-                                     pCodecCtx->width, pCodecCtx->height, AV_PIX_FMT_YUV420P, SWS_BICUBIC, NULL, NULL, NULL);
+    img_convert_ctx = sws_getContext(pCodecCtx->width, pCodecCtx->height, pCodecCtx->pix_fmt,pCodecCtx->width, pCodecCtx->height, AV_PIX_FMT_YUV420P, SWS_BICUBIC, NULL, NULL, NULL);
     
     
     if(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_TIMER)) {

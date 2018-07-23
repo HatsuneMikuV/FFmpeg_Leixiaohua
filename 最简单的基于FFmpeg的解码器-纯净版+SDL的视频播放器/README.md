@@ -6,7 +6,7 @@
 #### 如有任何问题，请邮件(anglemiku_v@163.com)联系或者QQ(479069761)联系，欢迎纠正！！！
 
 
-* 该程序使用FFmpeg+SDL2实现简单的视频播放
+* 只需要使用libavcodec的纯净解码器+SDL的视频播放
 
 
 ##### ffmpeg  如果未安装，请先安装
@@ -21,8 +21,17 @@
     *  brew install SDL2
     * ->Build Settings -> Library Search Paths  地址更换为自己电脑地址（报错的情况下）
     
+    
+* 关键函数和作用如下：
+    *  avcodec_register_all()：注册所有的编解码器。
+    *  avcodec_find_decoder()：查找解码器。
+    *  avcodec_alloc_context3()：为AVCodecContext分配内存。
+    *  avcodec_open2()：打开解码器。
+    *  avcodec_decode_video2()：解码一帧数据。
 
-#### 预览
+    *  av_parser_init()：初始化AVCodecParserContext。
+    *  av_parser_parse2()：解析获得一个Packet。
 
-![](https://github.com/HatsuneMikuV/FFmpeg_Leixiaohua/blob/master/%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E5%9F%BA%E4%BA%8EFFMPEG%2BSDL%E7%9A%84%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/res/player.png)
+    *  AVFrame：存储一帧解码后的像素数据
+    *  AVPacket：存储一帧（一般情况下）压缩编码数据
 

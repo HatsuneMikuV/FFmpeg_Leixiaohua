@@ -6,7 +6,7 @@
 #### 如有任何问题，请邮件(anglemiku_v@163.com)联系或者QQ(479069761)联系，欢迎纠正！！！
 
 
-* 该程序使用FFmpeg+SDL2实现简单的视频播放
+* 该程序基于FFMPEG+SDL的视频播放器：拆分-解码器和播放器
 
 
 ##### ffmpeg  如果未安装，请先安装
@@ -20,9 +20,4 @@
 * 安装方法
     *  brew install SDL2
     * ->Build Settings -> Library Search Paths  地址更换为自己电脑地址（报错的情况下）
-    
-
-#### 预览
-
-![](https://github.com/HatsuneMikuV/FFmpeg_Leixiaohua/blob/master/%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E5%9F%BA%E4%BA%8EFFMPEG%2BSDL%E7%9A%84%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/res/player.png)
 
