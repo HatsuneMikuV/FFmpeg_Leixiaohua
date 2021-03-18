@@ -91,7 +91,7 @@ int main(int argc, const char * argv[]) {
     struct SwsContext *img_convert_ctx;
     
     //char filepath[]="bigbuckbunny_480x272.h265";
-    char filepath[]= "/Users/angle/Desktop/FFmpeg/FFmpeg_Leixiaohua/最简单的基于FFMPEG+SDL的视频播放器/res/Titanic.ts";
+    char filepath[]= "/Users/miku/Documents/github/FFmpeg_Leixiaohua/最简单的基于FFMPEG+SDL的视频播放器/res/Titanic.ts";
     
     av_register_all();
     avformat_network_init();
@@ -107,7 +107,7 @@ int main(int argc, const char * argv[]) {
     }
     videoindex=-1;
     for(i=0; i<pFormatCtx->nb_streams; i++)
-        if(pFormatCtx->streams[i]->codec->codec_type==AVMEDIA_TYPE_VIDEO){
+        if(pFormatCtx->streams[i]->parser->parser->codec_type==AVMEDIA_TYPE_VIDEO){
             videoindex=i;
             break;
         }
